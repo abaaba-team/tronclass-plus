@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'sub_pages/mine.dart';
 import 'sub_pages/front.dart';
 import 'timetable.dart';
+import 'dynamic_page/dyn_page.dart';
+import 'Courses/Courses.dart';
 
 class MainPage extends StatefulWidget {
 
@@ -38,7 +40,7 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    pages = [const PageFront(), Home(Colors.white70 , '2'),TimeTable(),Home(Colors.amber, '4'),const PageMine()];//Home(Colors.teal , '3')
+    pages = [const PageFront(),Courses (),TimeTable(),DynamicPage(),const PageMine()];//Home(Colors.teal , '3')
     return Scaffold(
         body: pages[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
