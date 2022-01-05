@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../main_page.dart';
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
+import 'package:tronclass_plus/main.dart';
+import 'class_info.dart';
 //import 'Qrreader.dart';
 
 class Courses extends StatefulWidget{
@@ -9,7 +11,7 @@ class Courses extends StatefulWidget{
   @override
   State<Courses> createState() => _CoursesState();
 }
-
+int indexx =0;
 bool aca = true;
 class _CoursesState extends State<Courses> with TickerProviderStateMixin{
   late TabController _tabController;
@@ -539,7 +541,7 @@ class _CoursesState extends State<Courses> with TickerProviderStateMixin{
                     Align(
                       alignment: Alignment.topRight,
                       child: new IconButton(icon: new Icon(Icons.aspect_ratio_outlined,),
-                        onPressed: () => print('QRCODE_SCANNER'),),
+                        onPressed: () => print('View mode'),),
                     ),
                     Align(
                       alignment: Alignment.bottomRight,
@@ -556,8 +558,6 @@ class _CoursesState extends State<Courses> with TickerProviderStateMixin{
             ),
           ),
         ),
-
-
       ),
 
       //中間課程瀏覽
@@ -571,7 +571,13 @@ class _CoursesState extends State<Courses> with TickerProviderStateMixin{
                 return ListTile(
                   leading: const Icon(Icons.flight_land),
                   title: Text('$index class'),
-                  onTap: () => print('$index class pressed'),
+                  onTap: () {
+                    print('$index class pressed');
+                    indexx = index;
+                    Navigator.pushNamed(context, 'class_info');
+
+                  },
+
                   minVerticalPadding: 65.0,
                 );
               },
