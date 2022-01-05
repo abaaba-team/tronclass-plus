@@ -18,6 +18,17 @@ class _Page1State extends State<Page1> {
           '基本資訊',
           style: TextStyle(color: Colors.black),
         ),
+        leading: GestureDetector(
+          child: const Icon(
+            Icons.arrow_back_ios_rounded,
+            color: Colors.black,
+          ),
+          onTap: () {
+            // Navigator.pushNamed(context, '/mine');
+            Navigator.pop(context);
+          },
+          // color: Colors.black,
+        ),
       ),
       body: Container(
         color: Colors.white,
@@ -42,7 +53,8 @@ class _Page1State extends State<Page1> {
                 Text('繳交截止時間', style: TextStyle(fontSize: 15.0)),
                 Divider(),
                 Text('作業形式', style: TextStyle(fontSize: 15.0)),
-                Divider(),Text('完成指標', style: TextStyle(fontSize: 15.0)),
+                Divider(),
+                Text('完成指標', style: TextStyle(fontSize: 15.0)),
                 Text('評分方式',
                     style: TextStyle(
                         fontSize: 15.0,
