@@ -19,7 +19,7 @@ class _PageFrontState extends State<PageFront> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromRGBO(29,32,37,1),
+        backgroundColor: Color.fromRGBO(246,247,249,1),
       body:Container(
         padding: EdgeInsets.all(20.0),
         child:Column(
@@ -27,7 +27,7 @@ class _PageFrontState extends State<PageFront> {
             Container(
               decoration: new BoxDecoration(
                 border: new Border.all(color:Color(0xFFF0000),width: 0.5),
-                color:Color.fromRGBO(41,44,51,1),
+                color:Color.fromRGBO(237,237,237,1),
                 borderRadius:new BorderRadius.circular((20.0)),
               ),
               constraints: BoxConstraints(maxHeight: 50),
@@ -43,18 +43,14 @@ class _PageFrontState extends State<PageFront> {
                   style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
               ),
             ), //系統招呼
             SizedBox(height: 15,),
             Container(
               height: 100,
-              decoration: new BoxDecoration(
-                border: new Border.all(color:Color(0xFFF0000),width: 0.5),
-                color:Color.fromRGBO(41,44,51,1),
-                borderRadius:new BorderRadius.circular((5.0)),
-              ),
+              decoration: stylewhite(),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -91,7 +87,7 @@ class _PageFrontState extends State<PageFront> {
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ), //最近造訪
@@ -105,11 +101,7 @@ class _PageFrontState extends State<PageFront> {
                   Container(
                     height: 200,
                     width: 200,
-                    decoration: new BoxDecoration(
-                      border: new Border.all(color:Color(0xFFF0000),width: 0.5),
-                      color:Color.fromRGBO(41,44,51,1),
-                      borderRadius:new BorderRadius.circular((5.0)),
-                    ),
+                    decoration: stylewhite(),
                     child: Column(
                       children: [
                         Container(
@@ -126,7 +118,7 @@ class _PageFrontState extends State<PageFront> {
                             textAlign: TextAlign.left,
                             style: const TextStyle(
                               fontSize: 16,
-                              color: Colors.white,
+                              color: Colors.black,
                             ),
                           ),
                         ),
@@ -136,11 +128,7 @@ class _PageFrontState extends State<PageFront> {
                   Container(
                     height: 200,
                     width: 200,
-                    decoration: new BoxDecoration(
-                      border: new Border.all(color:Color(0xFFF0000),width: 0.5),
-                      color:Color.fromRGBO(41,44,51,1),
-                      borderRadius:new BorderRadius.circular((5.0)),
-                    ),
+                    decoration: stylewhite(),
                     child: Column(
                       children: [
                         Container(
@@ -157,7 +145,7 @@ class _PageFrontState extends State<PageFront> {
                             textAlign: TextAlign.left,
                             style: const TextStyle(
                               fontSize: 16,
-                              color: Colors.white,
+                              color: Colors.black,
                             ),
                           ),
                         ),
@@ -177,18 +165,14 @@ class _PageFrontState extends State<PageFront> {
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ), //待辦事項
             Container(
               height: 100,
               width: double.maxFinite,
-              decoration: new BoxDecoration(
-                border: new Border.all(color:Color(0xFFF0000),width: 0.5),
-                color:Color.fromRGBO(41,44,51,1),
-                borderRadius:new BorderRadius.circular((5.0)),
-              ),
+              decoration: stylewhite(),
               child: Column(
                 children: [
                   Container(
@@ -200,7 +184,7 @@ class _PageFrontState extends State<PageFront> {
                       style: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: Colors.black,
                       ),
                     ),
                   ),
@@ -213,7 +197,7 @@ class _PageFrontState extends State<PageFront> {
                       style: const TextStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: Colors.black,
                       ),
                     ),
                   )
@@ -257,4 +241,12 @@ Scan(){
 }
 checkin(){
   return null;
+}
+
+stylewhite(){
+  return new BoxDecoration(
+    border: new Border.all(color:Color(0xFFF0000),width: 0.5),
+    color:Color.fromRGBO(255,255,255,1),
+    borderRadius:new BorderRadius.circular((5.0)),
+  );
 }
