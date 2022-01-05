@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'main_page.dart';
-
+import 'Courses/Courses.dart';
+import 'Courses/class_info.dart';
 import 'sub_pages/mine.dart';
 import 'sub_pages/mine_about.dart';
 import 'sub_pages/mine_database.dart';
@@ -47,6 +48,12 @@ void main() {
       },
       '/mine/about': (context) {
         return MineAbout();
+      },
+      'Courses': (context) {
+        return Courses();
+      },
+      'class_info': (context) {
+        return Info();
       },
 
       // 'Card01':(context){return const card_01();},
